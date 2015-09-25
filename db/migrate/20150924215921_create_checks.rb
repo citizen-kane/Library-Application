@@ -1,6 +1,5 @@
 class CreateChecks < ActiveRecord::Migration
   def change
-    delete all from :checks
     
     create_table :checks do |t|
 

@@ -1,6 +1,5 @@
 class CreateUsers < ActiveRecord::Migration
   def change
-    drop_table :users
     create_table :users do |t|
 	t.column :email, :string, :limit => 100, :null => false
 	t.column :password, :string, :limit => 100, :null => false
