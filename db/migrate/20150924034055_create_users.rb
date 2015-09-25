@@ -10,5 +10,7 @@ class CreateUsers < ActiveRecord::Migration
     end
      User.create :email => "abc@ncsu.edu", :password => "ncsu", :name => "Ncsu", :is_admin => "Y"
      User.create :email => "kagarwa@ncsu.edu", :password => "kagarwa", :name => "Krishna Agarwala", :is_admin => "N"    
+     User.create :email => "admin@lib.com", :password => "admin", :name => "Preconfigured Admin", :is_admin => true
+
   end
 end
