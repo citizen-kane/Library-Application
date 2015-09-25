@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Isbn</th>
+      <th>Email</th>
+      <th>Checkout</th>
+      <th>Checkin</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checks.each do |check| %>
+      <tr>
+        <td><%= check.id %></td>
+        <td><%= check.isbn %></td>
+        <td><%= check.email %></td>
+        <td><%= check.checkout %></td>
+        <td><%= check.checkin %></td>
+        <td><%= check.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!%= link_to 'New Check', new_check_path %>
+<%= link_to 'Back', books_path %>
+

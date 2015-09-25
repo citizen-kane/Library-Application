@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @book.status %>
+</p>
+
+<% @book = Book.find(params[:id])%>
+
+<!%= form_for(@user) do |f| %>
+  <!%= f.label :email %><br>
+  <!%= f.text_field :email %>
+  <!%= f.hidden_field :isbn, :value = @book.isbn %>
+  <!%= link_to 'Checkout', checkout_book_path(@book) %> 
+  <!%= f.submit %>
+<!% end %>
+
+<% if (!isadmin) && ((current_user[:email] == @book.email) || (@book.email == nil))%>
+
+
+<% if @book.status %>
+<%= link_to 'Checkout', checkout_book_path(@book) %> |
+<%else%>
+<%= link_to 'CheckIn', checkin_book_path(@book) %> |
+<%end%>
+
+<%end%>
+<%= link_to 'Home', root_path %>

@@ -1,0 +1,35 @@
+<!%= Book.find(params[:isbn])%>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @check.isbn %>
+</p>
+
+<p>
+  <strong>Book Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @check.email %>
+</p>
+
+<p>
+  <strong>Checkout:</strong>
+  <%= @check.checkout %>
+</p>
+
+<p>
+  <strong>Checkin:</strong>
+  <%= @check.checkin %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @check.status %>
+</p>
+
+<!%= link_to 'Edit', edit_check_path(@check) %> |
+<%= link_to 'Back', checks_path %>

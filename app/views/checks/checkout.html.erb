@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Isbn</th>
+      <th>Email</th>
+      <th>Checkout</th>
+      <th>Checkin</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checks.each do |check| %>
+      <tr>
+        <td><%= check.id %></td>
+        <td><%= check.isbn %></td>
+        <td><%= check.email %></td>
+        <td><%= check.checkout %></td>
+        <td><%= check.checkin %></td>
+        <td><%= check.status %></td>
+        <td><%= link_to 'Show', check %></td>
+        <td><%= link_to 'Edit', edit_check_path(check) %></td>
+        <td><%= link_to 'Destroy', check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Check', new_check_path %>

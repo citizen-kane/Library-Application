@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: MyString
+  email: MyString
+  checkout: MyString
+  checkin: MyString
+  status: MyString
+
+two:
+  isbn: MyString
+  email: MyString
+  checkout: MyString
+  checkin: MyString
+  status: MyString
