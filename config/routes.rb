@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   
   root :to => 'home#index'
+  # root :to => 'sessions#new'
   get "home/index"
   
    get '/signin',  to: 'sessions#new'
